@@ -2,7 +2,7 @@ package com.RollTheDice.rollthedice;
 
 public class Player {
     public static void main(String[] args) {
-
+    BankRoll p1 = new BankRoll(1000);
 
     }
 
