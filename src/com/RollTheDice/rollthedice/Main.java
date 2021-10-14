@@ -5,7 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
 	//Initialization
-
+        Game game = new Game();
+        game.Run();
         int balance = 1000;
 
         betCalc(balance);
@@ -15,7 +16,7 @@ public class Main {
 
     }
     public static int betCalc(int bal){
-        Scanner scan = new Scanner(System.in);
+
         Random rand = new Random();
         int multi;
         int r;
