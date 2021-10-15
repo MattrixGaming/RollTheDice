@@ -7,7 +7,7 @@ public class Game
     private boolean isRunning = false;
     public void Run()
     {
-        Player p1 = new Player();
+        Player p1 = new Player(1000);
         //System.out.println(b1.());
         isRunning = true;
         while (isRunning)
