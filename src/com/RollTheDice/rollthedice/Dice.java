@@ -1,17 +1,20 @@
 package com.RollTheDice.rollthedice;
-import java.util.Random;
+import java.util.*;
 public class Dice
 {
-    public static int Roll(int diceCount)
+    public static int getDiceSum() {
+        return diceSum;
+    }
+
+    private static int diceSum;
+    public static int diceRoll()
     {
         Random rand = new Random();
-        int diceSum = 0;
-        int i = 1;
-        if(i = 1, i<=diceCount, i++){
-            int dR = rand.nextInt(6) + 1;
-            diceSum += dR;
-        }
-        return diceSum;
+        int dR = (rand.nextInt(6) + 1) + (rand.nextInt(6) + 1);
+        return diceSum = dR;
+    }
+    public static int resetDice() {
+        return diceSum = 0;
     }
 }
 
