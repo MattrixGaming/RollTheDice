@@ -4,6 +4,9 @@ public class Bankroll {
     public static void setBalance(int balance) {
         Bankroll.balance = balance;
     }
+    public static void removeBalance(int loss) {
+        Bankroll.balance -= loss;
+    }
 
     public static int getBalance() {
         return balance;

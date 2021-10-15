@@ -7,9 +7,7 @@ public class Main {
         //Initialization
         Game game = new Game();
         game.Run();
-        if (Bankroll.getBalance() <= 0){
-            game.Stop();
-        }
+
 
     }
 }

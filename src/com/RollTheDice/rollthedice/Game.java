@@ -18,6 +18,9 @@ public class Game
             HandleBetting();
             HandleDiceRoll();
             Dice.resetDice();
+            if (Bankroll.getBalance() <= 0){
+                Game.Stop();
+            }
             System.out.println("Balance: " + Bankroll.getBalance());
         }
     }
@@ -42,7 +45,7 @@ public class Game
                 Game.Stop();
             }else{
                 System.out.println("You lost! (-$500)");
-                multi = 0;
+                Bankroll.removeBalance(Player.getBet());
             }
         return multi;
     }
