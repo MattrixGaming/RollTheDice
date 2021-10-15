@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Game
 {
-    private boolean isRunning = false;
+    private static boolean isRunning;
     public void Run()
     {
         Player p1 = new Player();
@@ -28,7 +28,6 @@ public class Game
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a bet between 0-" + Bankroll.getBalance());
         Player.setBet(scan.nextInt());
-//        if (bet <= Bankroll.getBalance());
     }
     private static int HandleDiceRoll(){
         Dice dSum = new Dice();
@@ -39,7 +38,7 @@ public class Game
             System.out.println("You won! (+$" + (Player.getBet() * 2) + ")");
             HandlePayout(2);
             }else if(sum == 11){
-                System.out.println("You broke even.(+$0)");
+                System.out.println("You broke even. (+$0)");
                 HandlePayout(1);
             }else if(sum == 2){
                 Game.Stop();
@@ -55,7 +54,7 @@ public class Game
 
     }
     public static void Stop(){
-
+            isRunning = false;
             System.out.println("You lost!");
             System.exit(0);
     }

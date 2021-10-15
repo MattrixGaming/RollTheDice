@@ -7,15 +7,15 @@ public class Dice
     }
 
     private static int diceSum;
-    public static int diceRoll()
+    public static void diceRoll()
     {
         Random rand = new Random();
         int dR1 = (rand.nextInt(6) + 1);
         int dR2 = (rand.nextInt(6) + 1);
-        return diceSum = dR1 + dR2;
+        diceSum = dR1 + dR2;
     }
-    public static int resetDice() {
-        return diceSum = 0;
+    public static void resetDice() {
+        diceSum = 0;
     }
 }
 
