@@ -1,12 +1,16 @@
 package com.RollTheDice.rollthedice;
 
 public class Bankroll {
-    private int balance;
-
-    public Bankroll(int initialBalance) {
-        balance = initialBalance;
+    private static int balance;
+    public static void main(String[] args) {
+        getBalance(balance);
     }
-    public int getBalance() {
+    public int Bankroll(int initialBalance) {
+        balance = initialBalance;
+        return balance;
+    }
+    public static int getBalance(int balance) {
+
         return balance;            // returns value of instance var
     }
     public void addBal(int reward) {

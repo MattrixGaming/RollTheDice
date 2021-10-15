@@ -17,11 +17,11 @@ public class Game
             HandlePayout();
         }
     }
-    private void HandleBetting(int bal){
+    private static void HandleBetting(int bal){
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a bet between 0-" + bal);
         int bet = (int)scan.nextInt();
-        if (bet <= )
+        if (bet <= Bankroll.getBalance);
     }
     private void HandleDiceRoll(){...}
     private void HandlePayout(){...}
