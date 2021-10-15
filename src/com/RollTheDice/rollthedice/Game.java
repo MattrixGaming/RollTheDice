@@ -20,7 +20,8 @@ public class Game
     private void HandleBetting(int bal){
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a bet between 0-" + bal);
-        bet
+        int bet = (int)scan.nextInt();
+        if (bet <= )
     }
     private void HandleDiceRoll(){...}
     private void HandlePayout(){...}
