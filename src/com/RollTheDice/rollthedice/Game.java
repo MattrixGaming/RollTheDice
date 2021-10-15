@@ -8,7 +8,7 @@ public class Game
     public void Run()
     {
         Player p1 = new Player();
-        System.out.println(b1.());
+        //System.out.println(b1.());
         isRunning = true;
         while (isRunning)
         {
@@ -21,7 +21,7 @@ public class Game
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a bet between 0-" + bal);
         int bet = (int)scan.nextInt();
-        if (bet <= Bankroll.getBalance);
+        if (bet <= Bankroll.balance);
     }
     private void HandleDiceRoll(){...}
     private void HandlePayout(){...}

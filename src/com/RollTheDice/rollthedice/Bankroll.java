@@ -2,10 +2,9 @@ package com.RollTheDice.rollthedice;
 
 public class Bankroll {
     private static int balance;
-    public static void main(String[] args) {
-        getBalance(balance);
-    }
-    public int Bankroll(int initialBalance) {
+
+
+    public static int startBal(int initialBalance) {
         balance = initialBalance;
         return balance;
     }
