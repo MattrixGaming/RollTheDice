@@ -8,7 +8,7 @@ public class Game
     public void Run()
     {
         Player p1 = new Player();
-        System.out.println(p1.Balance());
+        System.out.println(b1.());
         isRunning = true;
         while (isRunning)
         {
