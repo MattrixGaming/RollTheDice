@@ -4,14 +4,16 @@ import java.util.*;
 
 public class Game
 {
+    //Init Is Running Boolean
     private static boolean isRunning;
+
+    //Runs New Game
     public void Run()
     {
         Player p1 = new Player();
         p1.setBal();
         p1.setName();
         System.out.println("Welcome " + p1.getName() + "!" + "You've been given a free $" + p1.getBal() + "!");
-        //System.out.println(b1.());
         isRunning = true;
         while (isRunning)
         {
@@ -24,11 +26,15 @@ public class Game
             System.out.println("Balance: " + Bankroll.getBalance());
         }
     }
+
+    //Sets Bet Amount
     private static void HandleBetting(){
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a bet between $0-" + Bankroll.getBalance());
         Player.setBet(scan.nextInt());
     }
+
+    //Handles Dice Roll
     private static int HandleDiceRoll(){
         Dice.diceRoll();
         int sum = Dice.getDiceSum();
@@ -47,11 +53,15 @@ public class Game
             }
         return multi;
     }
+
+    //Adds Reward
     private static void HandlePayout(int reward){
         reward *= Player.getBet();
         Bankroll.addBalance(reward);
 
     }
+
+    //Stops Game
     public static void Stop(){
             isRunning = false;
             System.out.println("You lost!");
