@@ -30,9 +30,8 @@ public class Game
         Player.setBet(scan.nextInt());
     }
     private static int HandleDiceRoll(){
-        Dice dSum = new Dice();
-        dSum.diceRoll();
-        int sum = dSum.getDiceSum();
+        Dice.diceRoll();
+        int sum = Dice.getDiceSum();
         int multi = 0;
         if(sum == 7){
             System.out.println("You won! (+$" + (Player.getBet() * 2) + ")");
