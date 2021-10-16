@@ -16,7 +16,7 @@ public class Game
         while (isRunning)
         {
             HandleBetting();
-            HandleDiceRoll();
+            HandlePayout(HandleDiceRoll());
             Dice.resetDice();
             if (Bankroll.getBalance() <= 0){
                 Game.Stop();
@@ -49,7 +49,7 @@ public class Game
         return multi;
     }
     private static void HandlePayout(int reward){
-        reward = HandleDiceRoll() * Player.getBet();
+        reward *= Player.getBet();
         Bankroll.addBalance(reward);
 
     }
