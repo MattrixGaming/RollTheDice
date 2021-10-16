@@ -26,7 +26,7 @@ public class Game
     }
     private static void HandleBetting(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a bet between 0-" + Bankroll.getBalance());
+        System.out.println("Enter a bet between $0-" + Bankroll.getBalance());
         Player.setBet(scan.nextInt());
     }
     private static int HandleDiceRoll(){
